@@ -5,8 +5,7 @@
 
 {@render children()}
 
-
-<div class="dock dock-xl px-">
+<div class="dock dock-xl">
     <button>
       <span class="icon size-[1.2em]">🏫</span>
       <span class="dock-label">학교</span>

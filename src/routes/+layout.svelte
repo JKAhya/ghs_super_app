@@ -6,25 +6,25 @@
 {@render children()}
 
 <div class="dock dock-xl">
-    <button>
+    <a href="">
       <span class="icon size-[1.2em]">🏫</span>
       <span class="dock-label">학교</span>
-    </button>
-    <button>
+    </a>
+    <a href="">
       <span class="icon size-[1.2em]">🚇</span>
       <span class="dock-label">등교</span>
-    </button>
+    </a>
     <!--<button class="dock-active">-->
-    <button>
+    <a href="/home">
       <span class="icon size-[1.2em]">🏠</span>
       <span class="dock-label">홈</span>
-    </button>
-    <button>
+    </a>
+    <a href="">
       <span class="icon size-[1.2em]">🤩</span>
       <span class="dock-label">일상</span>
-    </button>
-    <button>
+    </a>
+    <a href="/list">
       <span class="icon size-[1.2em]">📑</span>
       <span class="dock-label">전체</span>
-    </button>
+    </a>
 </div>

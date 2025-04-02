@@ -1,6 +1,6 @@
-# sv
+# 안내
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+NodeJS를 까셔야 정상적으로 보실 수 있습니다
 
 ## Creating a project
 

@@ -10,17 +10,17 @@
 
 {#if currentUrl.includes("home")}
   <div class="flex justify-center w-screen">
-    <div class="text-lg mt-20 w-38 text-center text-cyan-600 bg-zinc-100 subpixel-antialiased rounded-xl">📍기흥고등학교</div>
+    <div class="text-lg mt-20 w-38 text-center text-primary bg-base-200 subpixel-antialiased rounded-xl">📍기흥고등학교</div>
   </div>
   <div class="text-3xl pt-1 pb-10 text-center font-bold">생활정보 모아보기</div>
 {:else}
-  <div class="text-xs text-center ml-5 mt-4 w-32 text-cyan-700 bg-zinc-100 subpixel-antialiased rounded-xl">📍기흥고등학교</div>
-  <div class="text-xl pl-5 pb-7 text-zinc-700 ont-bold">생활정보 모아보기</div>
+  <div class="text-xs text-center ml-5 mt-4 w-32 text-primary bg-base-200 subpixel-antialiased rounded-xl">📍기흥고등학교</div>
+  <div class="text-xl pl-5 pb-7 text-primary-content ont-bold">생활정보 모아보기</div>
 {/if}
 
 {@render children()}
 
-<div class="dock dock-xl rounded-xl">
+<div class="dock dock-xl py-10 px-10 rounded-xl">
   <a href="/school" class:dock-active={currentUrl.includes("school")}>
     <span class="icon size-[1.55em]">
       <div class="text-2xl">🏫</div>

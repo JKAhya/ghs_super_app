@@ -32,9 +32,10 @@
     <div class="divider px-10 text-xs">생활정보</div>
     <li><a class="block text-start pl-10 py-1" href="/home">🏠 날씨</a></li>
     <li><a class="block text-start pl-10 py-1" href="/home">🏠 최근 재난</a></li>
-    <li><a class="block text-start pl-10 py-1" href="/home">🏠 기상레이더</a></li>
+    <li><a class="block text-start pl-10 py-1" href="../rader">🏠 기상레이더</a></li>
     <div class="divider px-10 text-xs">기술</div>
     <li><a class="block text-start pl-10 py-1" href="/home">🏠 오픈소스 라이선스</a></li>
     <li><a class="block text-start pl-10 pb-3" href="#github_alret">🏠 소스코드 공개</a></li>
+    
   </ul>
 </div>

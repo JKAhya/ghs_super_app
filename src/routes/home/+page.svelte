@@ -6,5 +6,5 @@
     <!--</ul>-->
     <div class="w-full bg-base-200 rounded-box text-lg">
       <div class="block text-start pl-10 pt-5 pb-5">즐겨찾기를 불러올 수 없어요.<br>즐겨찾기를 사용하기 위해선, 로그인이 필요해요.</div>
-    </div>
-  </div>
+      </div>
+</div>즐겨찾기 삭제, 순서 바꾸기, 중요 정보(수행평가 등) 알림, 로그인 페이지로 바로가기, 

@@ -13,7 +13,7 @@
       <input type="number" class="input" placeholder="00000" />
 
       <label class="fieldset-label mt-3 items-center justify-center">이름</label>
-      <input type="text" class="input" placeholder="고기흥" />
+      <input type="text" class="input" placeholder="기흥고" />
 
       <label class="fieldset-label mt-3 items-center justify-center">비밀번호</label>
       <input type="password" class="input" placeholder="개발자도 비밀번호를 볼 수 없어요." />

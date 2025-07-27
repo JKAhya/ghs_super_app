@@ -190,7 +190,7 @@
 
 </script>
 
-<div class="flex justify-center items-center w-screen px-5 py-2">
+<div class="flex justify-center items-center w-full px-5 py-2">
     <div class="w-full max-w-4xl mx-auto bg-base-200 rounded-box p-6 text-lg space-y-4">
         <div class={`w-full h-40 rounded-2xl flex items-center justify-center text-white text-6xl font-bold ${tempBgClass}`}>{icon}</div>
         <div class="flex-1 text-lg font-medium">
@@ -205,9 +205,11 @@
 
         <div>
             <h3 class="text-lg font-bold mb-2">현재 레이더 영상</h3>
+api키 안넣어서 레이더 이미지 뜰일 없음 api키 라이브서버에서 올리면 이미지랑 특보현황 잘뜨는거 확인 완료(7/27)
             {#if radarImageLoading}
                 <div class="flex justify-center items-center h-48 bg-gray-300 rounded-lg">
                     <p class="text-gray-600">레이더 이미지 로딩 중...</p>
+                    API 키 안넣어서 레이더 안뜸
                 </div>
             {:else}
                 {#if radarImageUrl}

@@ -70,7 +70,7 @@
   <rect class="cls-14" x="529.53" y="34" width="211.15" height="436"/>
   <rect class="cls-10" x="153.95" y="470" width="272.1" height="499.62"/>
   <text class="cls-6" transform="translate(185.31 1034.26)"><tspan x="0" y="0">용흥관</tspan></text>
-  <text class="cls-6" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
+  <text class="cls-6 text-base-content" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
   <text class="cls-6" transform="translate(1567.83 423.48)"><tspan x="0" y="0">별관</tspan></text>
   <rect class="cls-1" x="109.15" width="204" height="162"/>
   <rect class="cls-9" x="20" y="42" width="270" height="218"/>

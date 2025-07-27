@@ -86,7 +86,7 @@
   <rect class="cls-18" x="529.53" y="34" width="211.15" height="436"/>
   <rect class="cls-14" x="153.95" y="470" width="272.1" height="499.62"/>
   <text class="cls-9" transform="translate(185.31 1034.26)"><tspan x="0" y="0">용흥관</tspan></text>
-  <text class="cls-9" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
+  <text class="cls-9 text-base-content" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
   <text class="cls-9" transform="translate(1567.83 423.48)"><tspan x="0" y="0">별관</tspan></text>
   <rect class="cls-1" x="109.15" width="204" height="162"/>
   <rect class="cls-13" x="20" y="42" width="270" height="218"/>
@@ -275,7 +275,7 @@
   </g>
   <text class="cls-11" transform="translate(255.39 935.41)"><tspan x="0" y="0">강당로비</tspan></text>
   <text class="cls-8" transform="translate(458.56 650.07)"><tspan x="0" y="0">[용흥관 연결통로]</tspan></text>
-  <text class="cls-7" transform="translate(338.96 889.95)"><tspan x="0" y="0">[본관 연결통로]</tspan></text>
+  <text class="cls-7 text-base-content" transform="translate(338.96 889.95)"><tspan x="0" y="0">[본관 연결통로]</tspan></text>
   <g>
     <rect class="cls-17" x="741.5" y="471.27" width="157.88" height="124.87"/>
     <path d="M898.14,472.52v122.37h-155.38v-122.37h155.38M900.64,470.02h-160.38v127.37h160.38v-127.37h0Z"/>

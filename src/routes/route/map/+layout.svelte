@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '../app.css';
   import { page } from '$app/stores';
 
   const initialViewBox = { x: 0, y: 0, width: 1800, height: 1100 };
@@ -146,13 +145,16 @@
   on:mousemove={handleMouseMove}
 />
 
-<main class="w-full h-screen flex flex-col items-center justify-center p-4 bg-gray-100 font-bold">
-  <div class="text-center mb-4">
-    <div class="text-4xl text-black">기흥고 약도</div>
-  </div>
-
+<main class="w-full h-screen flex flex-col items-center justify-center p-4 bg-base-100 font-bold">
+  <ul class="menu menu-horizontal bg-base-200 mt-25 mb-5 px-10 rounded-2xl shadow-lg p-4 font-normal">
+    <li><a href="./1f/">1층</a></li>
+    <li><a href="./2f/">2층</a></li>
+    <li><a href="./3f/">3층</a></li>
+    <li><a href="./4f/">4층</a></li>
+    <li><a href="./5f/">5층</a></li>
+  </ul>
   <section
-    class="w-full h-screen max-w-5xl border-2 border-blue-400 rounded-lg shadow-lg overflow-hidden focus:outline-none focus:ring-4 focus:ring-blue-500/50"
+    class="w-full h-screen min-h-9/12 max-w-5xl border-2 border-primary rounded-lg shadow-lg overflow-hidden focus:outline-none focus:ring-4 focus:ring-blue-500/50"
     class:grabbing={isPanning}
     style="touch-action: none;"
     tabindex="0"
@@ -168,7 +170,7 @@
     <svg
       bind:this={svgElement}
       viewBox="{viewBox.x} {viewBox.y} {viewBox.width} {viewBox.height}"
-      class="w-full h-full cursor-grab"
+      class="w-full h-full cursor-grab bg-stone-50"
       role="img"
       aria-label="층별 약도 상세"
     >
@@ -176,91 +178,23 @@
     </svg>
   </section>
 
-  <div class="mt-4 flex flex-wrap justify-center items-center gap-2 text-black">
-    <div class="flex items-center border border-gray-300 rounded-lg">
-      <button on:click={() => pan('left')} class="p-2 hover:bg-gray-200 rounded-l-md" aria-label="왼쪽으로 이동">←</button>
+  <div class="mt-4 flex flex-wrap justify-center items-center gap-2 text-base-content">
+    <div class="flex items-center border border-base-300 rounded-lg">
+      <button on:click={() => pan('left')} class="p-2 btn btn-ghost rounded-l-md" aria-label="왼쪽으로 이동">←</button>
       <div class="flex flex-col">
-        <button on:click={() => pan('up')} class="p-2 border-l border-r border-gray-300 hover:bg-gray-200" aria-label="위로 이동">↑</button>
-        <button on:click={() => pan('down')} class="p-2 border-t border-l border-r border-gray-300 hover:bg-gray-200" aria-label="아래로 이동">↓</button>
+        <button on:click={() => pan('up')} class="p-2 btn btn-ghost" aria-label="위로 이동">↑</button>
+        <button on:click={() => pan('down')} class="p-2 btn btn-ghost" aria-label="아래로 이동">↓</button>
       </div>
-      <button on:click={() => pan('right')} class="p-2 hover:bg-gray-200 rounded-r-md" aria-label="오른쪽으로 이동">→</button>
+      <button on:click={() => pan('right')} class="p-2 btn btn-ghost rounded-r-md" aria-label="오른쪽으로 이동">→</button>
     </div>
-    <div class="flex items-center border border-gray-300 rounded-lg">
-      <button on:click={() => zoom('in')} class="p-2 font-bold hover:bg-gray-200 rounded-l-md" aria-label="확대">+</button>
-      <button on:click={() => zoom('out')} class="p-2 font-bold border-l border-r border-gray-300 hover:bg-gray-200" aria-label="축소">-</button>
-      <button on:click={resetZoom} class="p-2 hover:bg-gray-200 rounded-r-md" aria-label="기본 보기">⟲</button>
+    <div class="flex items-center border border-base-300 rounded-lg">
+      <button on:click={() => zoom('in')} class="p-2 btn btn-ghost font-bold rounded-l-md" aria-label="확대">+</button>
+      <button on:click={() => zoom('out')} class="p-2 btn btn-ghost font-bold" aria-label="축소">-</button>
+      <button on:click={resetZoom} class="p-2 btn btn-ghost rounded-r-md" aria-label="기본 보기">⟲</button>
     </div>
   </div>
   <br><br><br>
+
+  <div class="mb-25 text-center">Powered by map.hya35.com<br>
+  <div class="font-normal">이 기능은 Slat 시간에 기흥고등학교 김정현에 의해 CC0 1.0 Universal(퍼블릭 도메인) 라이선스로 제작 및 배포된 <wbr> 기흥고등학교 약도 SVG 파일과 이것을 열람하기 위한 지도형 뷰어 전체를 별도의 수정 없이 탑제한것입니다.</div></div>
 </main>
-
-<div class="dock dock-lg">
-  
-  <!-- 1층 링크 -->
-  {#if $page.url.pathname.startsWith('/1f')}
-    <!-- 현재 경로가 /1f로 시작하면 'dock-active' 클래스를 추가합니다. -->
-    <a href="/1f" class="dock-active">
-      <div class="size-[1.2em]">🚪</div>
-      <span class="dock-label">1층</span>
-    </a>
-  {:else}
-    <!-- 그렇지 않으면 일반 링크를 표시합니다. -->
-    <a href="/1f">
-      <div class="size-[1.2em]">🚪</div>
-      <span class="dock-label">1층</span>
-    </a>
-  {/if}
-
-  <!-- 2층 링크 -->
-  {#if $page.url.pathname.startsWith('/2f')}
-    <a href="/2f" class="dock-active">
-      <div class="size-[1.2em]">🎒</div>
-      <span class="dock-label">2층</span>
-    </a>
-  {:else}
-    <a href="/2f">
-      <div class="size-[1.2em]">🎒</div>
-      <span class="dock-label">2층</span>
-    </a>
-  {/if}
-
-  <!-- 3층 링크 -->
-  {#if $page.url.pathname.startsWith('/3f')}
-    <a href="/3f" class="dock-active">
-      <div class="size-[1.2em]">📒</div>
-      <span class="dock-label">3층</span>
-    </a>
-  {:else}
-    <a href="/3f">
-      <div class="size-[1.2em]">📒</div>
-      <span class="dock-label">3층</span>
-    </a>
-  {/if}
-
-  <!-- 4층 링크 -->
-  {#if $page.url.pathname.startsWith('/4f')}
-    <a href="/4f" class="dock-active">
-      <div class="size-[1.2em]">✏️</div>
-      <span class="dock-label">4층</span>
-    </a>
-  {:else}
-    <a href="/4f">
-      <div class="size-[1.2em]">✏️</div>
-      <span class="dock-label">4층</span>
-    </a>
-  {/if}
-
-  <!-- 5층 링크 -->
-  {#if $page.url.pathname.startsWith('/5f')}
-    <a href="/5f" class="dock-active">
-      <div class="size-[1.2em]">📔</div>
-      <span class="dock-label">5층</span>
-    </a>
-  {:else}
-    <a href="/5f">
-      <div class="size-[1.2em]">📔</div>
-      <span class="dock-label">5층</span>
-    </a>
-  {/if}
-
-</div>

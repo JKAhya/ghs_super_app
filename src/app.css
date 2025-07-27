@@ -81,7 +81,7 @@ body {
 
 
 @plugin "daisyui/theme" {
-  name: "light";
+  name: "dark";
   default: false;
   prefersdark: true;
   color-scheme: "dark";

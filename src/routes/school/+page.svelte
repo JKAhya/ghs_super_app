@@ -71,7 +71,7 @@
     });
   </script>
 
-<div class="flex justify-center items-center w-screen px-5 py-2">
+<div class="flex justify-center items-center w-full px-5 py-2">
   <div class="w-full max-w-4xl mx-auto bg-base-200 rounded-box p-6 text-lg space-y-2">
   <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-3xl font-bold">{icon}</div>
   <div class="flex-1 text-lg font-medium">
@@ -82,7 +82,7 @@
 </div></div>
 
 <!-- 정보 박스 -->
-<div class="flex justify-center items-center w-screen px-5 py-2">
+<div class="flex justify-center items-center w-full px-5 py-2">
   <div class="w-full max-w-4xl mx-auto bg-base-200 rounded-box p-6 text-lg space-y-8">
     
     <!-- 시간표 -->
@@ -149,8 +149,6 @@
     </tbody>
   </table>
 </section>
-
-  <a class="btn-primary btn btn-lg" href="https://GHSmap.hya35.com/1f">학교 약도</a>
 
   </div>
 </div>

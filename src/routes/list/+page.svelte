@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<div class="flex justify-center items-center w-screen px-5 py-2">
+<div class="flex justify-center items-center w-full px-5 py-2">
   <div class="w-full max-w-4xl mx-auto bg-base-200 rounded-box px-5 py-5 flex flex-col items-start gap-4">
     <div class="flex items-center gap-4 w-full">
       <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold">U</div>
@@ -24,7 +24,7 @@
   </div>
 </div>
 
-<div class="flex justify-center items-center w-screen px-5 py-2">
+<div class="flex justify-center items-center w-full px-5 py-2">
   <ul class="w-full max-w-4xl mx-auto bg-base-200 rounded-box text-lg">
     <div class="divider px-10 text-xs">학급</div>
     <li><a class="block text-start pl-10 pb-3 hover:bg-base-100 transition" href="/hom">⏳ 시간표</a></li>
@@ -47,4 +47,3 @@
     <li><a class="block text-start pl-10 pb-3 hover:bg-base-100 transition" href="#github_alret">💻 소스코드 공개</a></li>
   </ul>
 </div>
-

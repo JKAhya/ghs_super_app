@@ -51,7 +51,7 @@
   </defs>
   <rect class="cls-10" x="440.91" y="470" width="1038" height="302"/>
   <rect class="cls-10" x="529.53" y="148.72" width="211.15" height="321.28"/>
-  <text class="cls-4" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
+  <text class="cls-4 text-base-content" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
   <rect class="cls-1" x="109.15" width="204" height="162"/>
   <rect class="cls-6" x="20" y="42" width="270" height="218"/>
   <rect class="cls-8" width="270" height="222"/>

@@ -53,7 +53,7 @@
   <rect class="cls-2" x="1479" y="470" width="294" height="599.64"/>
   <rect class="cls-10" x="441" y="470" width="1038" height="302"/>
   <rect class="cls-10" x="529.53" y="34" width="211.15" height="436"/>
-  <text class="cls-5" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
+  <text class="cls-5 text-base-content" transform="translate(887.74 423.48)"><tspan x="0" y="0">본관</tspan></text>
   <text class="cls-5" transform="translate(1567.83 423.48)"><tspan x="0" y="0">별관</tspan></text>
   <rect class="cls-1" x="109.15" width="204" height="162"/>
   <rect class="cls-6" x="20" y="42" width="270" height="218"/>

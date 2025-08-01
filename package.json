@@ -34,6 +34,7 @@
 		"@auth/sveltekit": "^1.10.0",
 		"axios": "^1.10.0",
 		"bcryptjs": "^3.0.2",
-		"comcigan-parser": "^1.0.0"
+		"comcigan-parser": "^1.0.0",
+		"node-html-parser": "^7.0.1"
 	}
 }

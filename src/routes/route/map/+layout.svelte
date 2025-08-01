@@ -145,14 +145,19 @@
   on:mousemove={handleMouseMove}
 />
 
-<main class="w-full h-screen flex flex-col items-center justify-center p-4 bg-base-100 font-bold">
-  <ul class="menu menu-horizontal bg-base-200 mt-25 mb-5 px-10 rounded-2xl shadow-lg p-4 font-normal">
-    <li><a href="./1f/">1층</a></li>
-    <li><a href="./2f/">2층</a></li>
-    <li><a href="./3f/">3층</a></li>
-    <li><a href="./4f/">4층</a></li>
-    <li><a href="./5f/">5층</a></li>
+<main class="w-full h-full flex flex-col items-center justify-center p-4 bg-base-100 font-bold">
+
+  <div class="pt-5 pb-11">
+    <ul class="menu menu-horizontal bg-base-200 px-10 rounded-2xl shadow-lg p-4 font-normal">
+      <li><a href="./1f/">1층</a></li>
+      <li><a href="./2f/">2층</a></li>
+      <li><a href="./3f/">3층</a></li>
+      <li><a href="./4f/">4층</a></li>
+      <li><a href="./5f/">5층</a></li>
   </ul>
+  </div>
+
+
   <section
     class="w-full h-screen min-h-9/12 max-w-5xl border-2 border-primary rounded-lg shadow-lg overflow-hidden focus:outline-none focus:ring-4 focus:ring-blue-500/50"
     class:grabbing={isPanning}
@@ -193,8 +198,7 @@
       <button on:click={resetZoom} class="p-2 btn btn-ghost rounded-r-md" aria-label="기본 보기">⟲</button>
     </div>
   </div>
-  <br><br><br>
 
-  <div class="mb-25 text-center">Powered by map.hya35.com<br>
-  <div class="font-normal">이 기능은 Slat 시간에 기흥고등학교 김정현에 의해 CC0 1.0 Universal(퍼블릭 도메인) 라이선스로 제작 및 배포된 <wbr> 기흥고등학교 약도 SVG 파일과 이것을 열람하기 위한 지도형 뷰어 전체를 별도의 수정 없이 탑제한것입니다.</div></div>
+  <div class=" mt-10 text-center">Powered by map.hya35.com<br>
+  <div class="font-normal">이 기능은 Slat 시간에 기흥고등학교 김정현에 의해 <br>CC0 1.0 Universal(퍼블릭 도메인) 라이선스로 제작 및 배포된 <wbr> 기흥고등학교 약도 SVG 파일과 이것을 열람하기 위한 지도형 뷰어 전체를 별도의 수정 없이 탑제한것입니다.</div></div>
 </main>

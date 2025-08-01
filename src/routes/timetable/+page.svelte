@@ -39,21 +39,24 @@
     // @ts-ignore
     function formatSubject(subject, teacher) {
         if (!subject && !teacher) return ''; // 수업이 없는 경우
-        return `${subject || ''} ${teacher ? `(${teacher})` : ''}`;
+    return `${subject || ''}${teacher ? `\n${teacher}` : ''}`;
     }
 </script>
 
 <style>
    :global(html) {
        background-color: var(--base-200);
+        white-space: pre-line;
+        /* 필요에 따라 텍스트 정렬 */
+        text-align: center;
    }
 </style>
 
-<div class="flex flex-col items-center justify-center p-4 bg-base-200 h-full w-full">
-    <div class="card w-full max-w-4xl bg-base-100 shadow-xl p-6 mb-8 rounded-box">
+<div class="flex flex-col items-center justify-center h-full w-full">
+    <div class="card w-full max-w-4xl p-1 rounded-box">
 
         <!-- 학년/반 입력 폼 -->
-        <form method="POST" action="?/getTimetable" use:enhance class="form-control mb-8">
+        <form method="POST" action="?/getTimetable" use:enhance class="form-control mb-8 p-4">
             <div class="flex flex-col md:flex-row gap-4 items-end justify-center">
                 <!-- 학년 입력 -->
                 <div class="flex-1 w-full">
@@ -107,15 +110,15 @@
 
         <!-- 시간표 및 시정표 표시 -->
         {#if currentTimetable && currentClassTime}
-            <h2 class="text-2xl font-bold text-center mb-4 text-secondary">
-                {currentGrade}학년 {currentClass}반 시간표
+            <h2 class="text-2xl text-center mb-4">
+                [ {currentGrade}학년 {currentClass}반 시간표 ]
             </h2>
 
             <!-- 시간표 테이블 -->
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto bg-base-100">
                 <table class="table table-zebra w-full border-collapse border border-base-300 rounded-box">
                     <thead>
-                        <tr class="bg-base-200">
+                        <tr class="bg-base-200 ">
                             <th class="border border-base-300 p-3 text-center">교시</th>
                             {#each weekdays as day}
                                 <th class="border border-base-300 p-3 text-center">{day}</th>

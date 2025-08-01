@@ -6,12 +6,14 @@
     let icon: string = '⏳';
     let loading = true;
 
+    export let data;
+
     const KOR_WEEKDAYS = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
 
     let today = new Date();
     let weekday = KOR_WEEKDAYS[today.getDay()];
     let dateStr = `${today.getFullYear()}년 ${String(today.getMonth()+1).padStart(2,'0')}월 ${String(today.getDate()).padStart(2,'0')}일`;
-
+    
     onMount(async () => {
       try {
         if (!navigator.geolocation) {
@@ -89,30 +91,7 @@
     <section>
       <h3 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2">시간표</h3>
       <div class="overflow-x-auto">
-        <table class="w-full min-w-max text-center border-collapse">
-          <thead>
-            <tr class="bg-base-300">
-              <th class="border border-gray-400 px-4 py-2">1교시</th>
-              <th class="border border-gray-400 px-4 py-2">2교시</th>
-              <th class="border border-gray-400 px-4 py-2">3교시</th>
-              <th class="border border-gray-400 px-4 py-2">4교시</th>
-              <th class="border border-gray-400 px-4 py-2">5교시</th>
-              <th class="border border-gray-400 px-4 py-2">6교시</th>
-              <th class="border border-gray-400 px-4 py-2">7교시</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border border-gray-400 px-4 py-2">수학</td>
-              <td class="border border-gray-400 px-4 py-2">국어</td>
-              <td class="border border-gray-400 px-4 py-2">국사</td>
-              <td class="border border-gray-400 px-4 py-2">과학</td>
-              <td class="border border-gray-400 px-4 py-2">동아리</td>
-              <td class="border border-gray-400 px-4 py-2">동아리</td>
-              <td class="border border-gray-400 px-4 py-2">없음</td>
-            </tr>
-          </tbody>
-        </table>
+        <iframe title="시간표" src="/timetable" class="w-full h-159 border-0 bg-base-200"></iframe>
       </div>
     </section>
 
@@ -131,10 +110,22 @@
         <td class="border border-gray-400 px-4 py-2 align-top text-center font-semibold">
           <div style="flex"><div>중식</div></div>
         </td>
-        <td class="border border-gray-400 px-4 py-2 whitespace-pre-line">
-          <span class="font-bold text-notice">nan Kcal</span><br>
-          녹두영양닭죽&단각 <br> 냉메밀소바 <br> 오이지무침
-          배추김치 <br> 에그타르트 <br> 자두 <br> 천도복숭아
+        <td class="overflow-x-auto border border-gray-400 px-4 py-2 whitespace-pre-line">
+          {#if data.error}
+            <p class="error">critical error occured.</p>
+          {:else if data.boardContent && data.boardContent.length > 0}
+            <ul>
+              {#each data.boardContent as item}
+                <li>{item}</li>
+              {/each}
+            </ul>
+          {:else}
+            <p>오늘은 중식이 없는 날입니다.</p>
+          {/if}
+
+          알레르기 정보 :<br>
+1.난류 2.우유 3.메밀 4.땅콩 5.대두 6.밀 7.고등어 8.게 9.새우 10.돼지고기 11.복숭아 12.토마토 13.아황산류 14.호두 15.닭고기16.쇠고기
+17.오징어 18.조개류(굴,전복,홍합 포함) 19.잣
         </td>
         </tr>
       <tr>

@@ -8,6 +8,10 @@
   let currentUrl = $derived(page.url.href);
 </script>
 
+{#if currentUrl.includes("timetable")}
+
+<div class="bg-base-200">{@render children()}</div>
+{:else}
 {#if currentUrl.includes("home")}
   <div class=" mt-7 pb-4 text-center text-2xl">기흥고 생활정보</div>
   <div class="flex justify-center items-center w-full px-5 py-2 text-base text-center">
@@ -127,3 +131,4 @@
     </span>
   </a>
 </div>
+{/if}

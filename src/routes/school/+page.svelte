@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import { ALLERGY_MAP, getAllergyNames } from '$lib/allergyMap'; // 새로 만든 파일 임포트
 
+  let activeTab = '음료';
+
   let weather: string = '날씨 정보 로딩 중...';
   let temp: string = '';
   let icon: string = '⏳';
@@ -104,60 +106,110 @@
 
 <div class="flex justify-center items-center w-full px-5 py-2">
   <div class="w-full max-w-4xl mx-auto bg-base-200 rounded-box p-6 text-lg space-y-8">
-    
+
+    <!-- 시간표 -->
     <section>
       <h3 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2">시간표</h3>
       <div class="overflow-x-auto">
-        <iframe title="시간표" src="/timetable" class="overflow-x-auto w-full h-screen border-0 bg-base-200"></iframe>
+        <iframe title="시간표" src="/timetable" class="w-full h-screen border-0 bg-base-200"></iframe>
       </div>
     </section>
 
-
+    <!-- 급식 -->
     <section>
-      <h3 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2">메뉴판</h3>
-      <table class="w-full text-left border-collapse">
-        <thead>
-          <tr class="bg-base-300">
-            <th class="border border-gray-400 px-4 py-2">구분</th>
-            <th class="border border-gray-400 px-4 py-2">메뉴</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-400 px-4 py-2 align-top text-center font-semibold">
-              <div style="flex"><div>중식</div></div>
-            </td>
-            <td class="overflow-x-auto border border-gray-400 px-4 py-1 whitespace-pre-line">
-              {#if data.error}
-                <p class="error">급식 정보를 불러오는 데 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.</p>
-              {:else if data.boardContent && data.boardContent.length > 0}
-                <ul class="">
-                  {#each data.boardContent as item}
-                    <li class="py-1 flex items-center justify-between">
-                      <span>{item.name}</span>
-                      {#if item.allergyCodes.length > 0}
-                        <button class="btn btn-xs btn-outline btn-primary ml-2" on:click={() => openAllergyModal(item)}>
-                          알러지 정보 표시
-                        </button>
-                      {/if}
-                    </li>
-                  {/each}
-                </ul>
-              {:else}
-                <p>오늘은 중식이 없는 날입니다.</p>
-              {/if}
-            </td>
-          </tr>
-          <tr>
-            <td class="border border-gray-400 px-4 py-2 align-top text-center font-semibold">
-              <div style="flex"><div>매점</div><div>메뉴</div></div>
-            </td>
-            <td class="border border-gray-400 px-4 py-2 whitespace-pre-line">
-              급식실을 애용하세요.
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <h3 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2">급식</h3>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra w-full text-lg">
+          <thead>
+            <tr class="bg-base-300">
+              <th class="border border-gray-400 px-4 py-2 text-center">구분</th>
+              <th class="border border-gray-400 px-4 py-2">메뉴</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-400 px-4 py-2 align-top text-center font-semibold">중식</td>
+              <td class="border border-gray-400 px-4 py-2">
+                {#if data.error}
+                  <p class="error">급식 정보를 불러오는 데 문제가 발생했습니다.</p>
+                {:else if data.boardContent?.length > 0}
+                  <ul>
+                    {#each data.boardContent as item}
+                      <li class="py-1 flex items-center justify-between">
+                        <span>{item.name}</span>
+                        {#if item.allergyCodes.length > 0}
+                          <button class="btn btn-xs btn-outline btn-primary ml-2"
+                            on:click={() => openAllergyModal(item)}>
+                            알러지 정보 표시
+                          </button>
+                        {/if}
+                      </li>
+                    {/each}
+                  </ul>
+                {:else}
+                  <p>오늘은 중식이 없는 날입니다.</p>
+                {/if}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 매점 (탭 전환) -->
+    <section>
+      <h3 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2">매점 메뉴</h3>
+
+      <!-- Tabs -->
+      <div role="tablist" class="tabs tabs-boxed mb-4">
+        <a role="tab" class="tab" class:tab-active={activeTab === '음료'} on:click={() => activeTab = '음료'}>음료</a>
+        <a role="tab" class="tab" class:tab-active={activeTab === '제과'} on:click={() => activeTab = '제과'}>제과</a>
+        <a role="tab" class="tab" class:tab-active={activeTab === '분식'} on:click={() => activeTab = '분식'}>분식</a>
+      </div>
+
+      <!-- Tabs content -->
+      <div class="overflow-x-auto">
+        <table class="table table-zebra w-full text-lg">
+          <thead>
+            <tr class="bg-base-300">
+              <th class="px-4 py-2">메뉴</th>
+              <th class="px-4 py-2">가격</th>
+            </tr>
+          </thead>
+          <tbody>
+            {#if activeTab === '음료'}
+              <tr><td>생수/과수(사과/복숭아)</td><td>500</td></tr>
+              <tr><td>제티</td><td>700</td></tr>
+              <tr><td>초코/딸기/바나나 우유</td><td>800</td></tr>
+              <tr><td>나랑드 사이다(오리지널/애플)</td><td>800</td></tr>
+              <tr><td>오란씨(오렌지/파인애플)</td><td>800</td></tr>
+              <tr><td>오라떼(피치/애플)</td><td>800</td></tr>
+              <tr><td>복숭아 녹차/레몬 녹차</td><td>1000</td></tr>
+              <tr><td>애플망고/블루하와이/자몽소다</td><td>1100</td></tr>
+              <tr><td>파워에이드/포카리스웨트/데미소다(복숭아/애플)</td><td>1100</td></tr>
+              <tr><td>포카리스웨트</td><td>1500</td></tr>
+            {:else if activeTab === '제과'}
+              <tr><td>하리보, 멘토스</td><td>200</td></tr>
+              <tr><td>사우어젤리, 아이스바</td><td>300</td></tr>
+              <tr><td>새콤짱, 감자알칩, 새콤달콤, 포도사탕, 에낙, 카스타드</td><td>500</td></tr>
+              <tr><td>마들렌</td><td>600</td></tr>
+              <tr><td>뻥이오, 미쯔</td><td>700</td></tr>
+              <tr><td>고래밥, 예감, 난나나콘, 돼지바/옥동자/요맘때/플레인깔기바, 탱크보이/젤루좋아/뽕따</td><td>800</td></tr>
+              <tr><td>칸쵸, 구운감자, 뿌셔뿌셔</td><td>1000</td></tr>
+              <tr><td>치킨팝닭강정, 치즈뿌린팝</td><td>1100</td></tr>
+              <tr><td>쫄병스낵</td><td>1200</td></tr>
+              <tr><td>크룽지, 설레임/윌드콘/부라보초코/슈퍼콘민초/구구콘</td><td>1300</td></tr>
+              <tr><td>콘초, 추러스, 홈런볼, 브라우니</td><td>1500</td></tr>
+            {:else if activeTab === '분식'}
+              <tr><td>쌀떡볶이</td><td>600</td></tr>
+              <tr><td>핫바</td><td>1200</td></tr>
+              <tr><td>핫도그, 구운주먹밥</td><td>1500</td></tr>
+              <tr><td>만두(고기/김치)</td><td>2000</td></tr>
+              <tr><td>포켓양념치킨, 어니언크림치킨</td><td>3500</td></tr>
+            {/if}
+          </tbody>
+        </table>
+      </div>
     </section>
   </div>
 </div>

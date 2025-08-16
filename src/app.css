@@ -1,41 +1,77 @@
 @font-face {
-    font-family: 'NanumSquareNeoLight';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.ttf) format("truetype");
+	font-family: 'NanumSquareNeoLight';
+	src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot);
+	src:
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot?#iefix)
+			format('embedded-opentype'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff)
+			format('woff'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.ttf)
+			format('truetype');
 }
 
 @font-face {
-    font-family: 'NanumSquareNeo';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
+	font-family: 'NanumSquareNeo';
+	src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
+	src:
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix)
+			format('embedded-opentype'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff)
+			format('woff'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf)
+			format('truetype');
 }
 
 @font-face {
-    font-family: 'NanumSquareNeoBold';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf) format("truetype");
+	font-family: 'NanumSquareNeoBold';
+	src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot);
+	src:
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot?#iefix)
+			format('embedded-opentype'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff)
+			format('woff'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf)
+			format('truetype');
 }
 
 @font-face {
-    font-family: 'NanumSquareNeoExtraBold';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.ttf) format("truetype");
+	font-family: 'NanumSquareNeoExtraBold';
+	src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot);
+	src:
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot?#iefix)
+			format('embedded-opentype'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff)
+			format('woff'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.ttf)
+			format('truetype');
 }
 
 @font-face {
-    font-family: 'NanumSquareNeoHeavy';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.ttf) format("truetype");
+	font-family: 'NanumSquareNeoHeavy';
+	src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot);
+	src:
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot?#iefix)
+			format('embedded-opentype'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff)
+			format('woff'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.ttf)
+			format('truetype');
 }
 
 @font-face {
-    font-family: 'NanumSquareNeoVariable';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.ttf) format("truetype");
+	font-family: 'NanumSquareNeoVariable';
+	src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot);
+	src:
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot?#iefix)
+			format('embedded-opentype'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff)
+			format('woff'),
+		url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.ttf)
+			format('truetype');
 }
 
 body {
-  font-family: NanumSquareNeoBold;
+	font-family: NanumSquareNeoBold;
 }
 
 @import 'tailwindcss';
@@ -43,74 +79,72 @@ body {
 @plugin '@tailwindcss/typography';
 @plugin "daisyui";
 
-
 @plugin "daisyui/theme" {
-  name: "light";
-  default: true;
-  prefersdark: false;
-  color-scheme: "light";
-  --color-base-100: oklch(100% 0 0);
-  --color-base-200: oklch(98% 0 0);
-  --color-base-300: oklch(95% 0 0);
-  --color-base-content: oklch(21% 0.006 285.885);
-  --color-primary: oklch(74% 0.16 232.661);
-  --color-primary-content: oklch(14% 0.005 285.823);
-  --color-secondary: oklch(65% 0.241 354.308);
-  --color-secondary-content: oklch(94% 0.028 342.258);
-  --color-accent: oklch(77% 0.152 181.912);
-  --color-accent-content: oklch(38% 0.063 188.416);
-  --color-neutral: oklch(14% 0.005 285.823);
-  --color-neutral-content: oklch(92% 0.004 286.32);
-  --color-info: oklch(81% 0.111 293.571);
-  --color-info-content: oklch(29% 0.066 243.157);
-  --color-success: oklch(76% 0.177 163.223);
-  --color-success-content: oklch(37% 0.077 168.94);
-  --color-warning: oklch(82% 0.189 84.429);
-  --color-warning-content: oklch(41% 0.112 45.904);
-  --color-error: oklch(71% 0.194 13.428);
-  --color-error-content: oklch(27% 0.105 12.094);
-  --radius-selector: 2rem;
-  --radius-field: 1rem;
-  --radius-box: 2rem;
-  --size-selector: 0.3125rem;
-  --size-field: 0.3125rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 0;
+	name: 'light';
+	default: true;
+	prefersdark: false;
+	color-scheme: 'light';
+	--color-base-100: oklch(100% 0 0);
+	--color-base-200: oklch(98% 0 0);
+	--color-base-300: oklch(95% 0 0);
+	--color-base-content: oklch(21% 0.006 285.885);
+	--color-primary: oklch(74% 0.16 232.661);
+	--color-primary-content: oklch(14% 0.005 285.823);
+	--color-secondary: oklch(65% 0.241 354.308);
+	--color-secondary-content: oklch(94% 0.028 342.258);
+	--color-accent: oklch(77% 0.152 181.912);
+	--color-accent-content: oklch(38% 0.063 188.416);
+	--color-neutral: oklch(14% 0.005 285.823);
+	--color-neutral-content: oklch(92% 0.004 286.32);
+	--color-info: oklch(81% 0.111 293.571);
+	--color-info-content: oklch(29% 0.066 243.157);
+	--color-success: oklch(76% 0.177 163.223);
+	--color-success-content: oklch(37% 0.077 168.94);
+	--color-warning: oklch(82% 0.189 84.429);
+	--color-warning-content: oklch(41% 0.112 45.904);
+	--color-error: oklch(71% 0.194 13.428);
+	--color-error-content: oklch(27% 0.105 12.094);
+	--radius-selector: 2rem;
+	--radius-field: 1rem;
+	--radius-box: 2rem;
+	--size-selector: 0.3125rem;
+	--size-field: 0.3125rem;
+	--border: 1px;
+	--depth: 1;
+	--noise: 0;
 }
 
-
 @plugin "daisyui/theme" {
-  name: "dark";
-  default: false;
-  prefersdark: true;
-  color-scheme: "dark";
-  --color-base-100: oklch(21% 0.034 264.665);
-  --color-base-200: oklch(12% 0.042 264.695);
-  --color-base-300: oklch(12% 0.042 264.695);
-  --color-base-content: oklch(92% 0.006 264.531);
-  --color-primary: oklch(50% 0.134 242.749);
-  --color-primary-content: oklch(92% 0.004 286.32);
-  --color-secondary: oklch(45% 0.187 3.815);
-  --color-secondary-content: oklch(92% 0.004 286.32);
-  --color-accent: oklch(60% 0.118 184.704);
-  --color-accent-content: oklch(92% 0.004 286.32);
-  --color-neutral: oklch(14% 0.005 285.823);
-  --color-neutral-content: oklch(92% 0.004 286.32);
-  --color-info: oklch(54% 0.281 293.009);
-  --color-info-content: oklch(92% 0.004 286.32);
-  --color-success: oklch(59% 0.145 163.225);
-  --color-success-content: oklch(92% 0.004 286.32);
-  --color-warning: oklch(66% 0.179 58.318);
-  --color-warning-content: oklch(92% 0.004 286.32);
-  --color-error: oklch(51% 0.222 16.935);
-  --color-error-content: oklch(92% 0.004 286.32);
-  --radius-selector: 2rem;
-  --radius-field: 1rem;
-  --radius-box: 2rem;
-  --size-selector: 0.3125rem;
-  --size-field: 0.3125rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 0;
+	name: 'dark';
+	default: false;
+	prefersdark: true;
+	color-scheme: 'dark';
+	--color-base-100: oklch(21% 0.034 264.665);
+	--color-base-200: oklch(12% 0.042 264.695);
+	--color-base-300: oklch(12% 0.042 264.695);
+	--color-base-content: oklch(92% 0.006 264.531);
+	--color-primary: oklch(50% 0.134 242.749);
+	--color-primary-content: oklch(92% 0.004 286.32);
+	--color-secondary: oklch(45% 0.187 3.815);
+	--color-secondary-content: oklch(92% 0.004 286.32);
+	--color-accent: oklch(60% 0.118 184.704);
+	--color-accent-content: oklch(92% 0.004 286.32);
+	--color-neutral: oklch(14% 0.005 285.823);
+	--color-neutral-content: oklch(92% 0.004 286.32);
+	--color-info: oklch(54% 0.281 293.009);
+	--color-info-content: oklch(92% 0.004 286.32);
+	--color-success: oklch(59% 0.145 163.225);
+	--color-success-content: oklch(92% 0.004 286.32);
+	--color-warning: oklch(66% 0.179 58.318);
+	--color-warning-content: oklch(92% 0.004 286.32);
+	--color-error: oklch(51% 0.222 16.935);
+	--color-error-content: oklch(92% 0.004 286.32);
+	--radius-selector: 2rem;
+	--radius-field: 1rem;
+	--radius-box: 2rem;
+	--size-selector: 0.3125rem;
+	--size-field: 0.3125rem;
+	--border: 1px;
+	--depth: 1;
+	--noise: 0;
 }

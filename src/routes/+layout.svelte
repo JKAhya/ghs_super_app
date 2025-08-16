@@ -3,9 +3,32 @@
   import { onMount } from "svelte";
   let { children } = $props();
 
+
   import { page } from "$app/state";
 
   let currentUrl = $derived(page.url.href);
+
+  let webManifestLink = '';
+
+  onMount(async () => {
+    // 1. 브라우저 환경에서만 pwaInfo 읽기
+    try {
+      const { pwaInfo } = await import('virtual:pwa-info');
+      webManifestLink = pwaInfo?.webManifest?.linkTag ?? '';
+    } catch (e) {
+      console.warn('[PWA] pwaInfo import failed', e);
+    }
+
+    // 2. 서비스워커 등록
+    if ('serviceWorker' in navigator) {
+      try {
+        const reg = await navigator.serviceWorker.register('/sw.js'); // sw.js 경로 확인
+        console.log('✅ Service Worker registered', reg);
+      } catch (err) {
+        console.error('[PWA SVR][ERROR] Service Worker registration failed:', err);
+      }
+    }
+  });
 </script>
 
 {#if currentUrl.includes("timetable")}

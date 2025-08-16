@@ -24,7 +24,6 @@ export default defineConfig({
 				short_name: '기흥고 생활정보 모아보기',
 				start_url: '/home',
 				display: 'standalone',
-				background_color: '#e2e5e9',
 				theme_color: '#0069a8',
 				icons: [
 					{

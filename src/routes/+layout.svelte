@@ -2,7 +2,11 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	let { children } = $props();
-	import { getMessaging } from 'firebase/messaging';
+	import { auth } from '$lib/firebase';
+	import { onAuthStateChanged, type User } from 'firebase/auth';
+	import { currentUser } from '$lib/stores/user';
+
+	let user = null;
 
 	import { page } from '$app/state';
 
@@ -17,6 +21,9 @@
 	let supported = true;
 
 	onMount(async () => {
+		onAuthStateChanged(auth, (user: User | null) => {
+			currentUser.set(user); // 로그인/로그아웃 상태를 전역 store에 반영
+		});
 		// PWA plugin handles registration. We just check for support
 		// and set up foreground message handling.
 		if (!('serviceWorker' in navigator)) {
@@ -74,6 +81,7 @@ ${body}`);
 			});
 
 			console.log('FCM token:', fcmToken);
+
 			// TODO: Send this token to your backend to store it
 			// await fetch('/api/push/register', { method:'POST', body: JSON.stringify({ token: fcmToken }) })
 			alert('푸시 알림이 활성화되었습니다.');
@@ -120,6 +128,12 @@ ${body}`);
 
 			<div class="absolute left-1/2 -translate-x-1/2 text-center text-xl">기흥고 생활정보</div>
 		</div>
+	{/if}
+
+	{#if user}
+		<p>환영합니다, {$currentUser.displayName || $currentUser.email}님!</p>
+	{:else}
+		<p>로그인하지 않았습니다.</p>
 	{/if}
 
 	<div class="w-full">

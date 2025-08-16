@@ -1,5 +1,14 @@
 import { initializeApp } from 'firebase/app';
 import { getMessaging, isSupported, onMessage, type Messaging } from 'firebase/messaging';
+import {
+	getAuth,
+	GoogleAuthProvider,
+	signInWithPopup,
+	signInWithEmailAndPassword,
+	createUserWithEmailAndPassword,
+	signOut,
+	type User
+} from 'firebase/auth';
 
 export const firebaseApp = initializeApp({
 	apiKey: 'AIzaSyBWw_3cx3vbIpHlxgOVZOiljKG61qM_MeM',
@@ -16,3 +25,6 @@ export const messagingPromise: Promise<Messaging | null> = isSupported().then((s
 );
 
 export { onMessage };
+
+export const auth = getAuth(firebaseApp);
+export const googleProvider = new GoogleAuthProvider();

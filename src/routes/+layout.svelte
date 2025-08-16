@@ -140,6 +140,8 @@ ${body}`);
 		{@render children()}
 	</div>
 
+	{fcmToken}
+
 	<br /><br /><br />
 
 	<!-- You can open the modal using ID.showModal() method -->
